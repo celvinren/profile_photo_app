@@ -12,16 +12,6 @@ class PhotoBloc extends Bloc<PhotoEvent, PhotoState> {
     on<GetPhoto>(_onGetPhoto);
   }
 
-  // @override
-  // Stream<PhotoState> mapEventToState(
-  //   PhotoEvent event,
-  // ) async* {
-  //   if (event is GetPhoto) {
-  //     final photo = event.photo;
-  //     yield PhotoSet(photo);
-  //   }
-  // }
-
   void _onGetPhoto(
     GetPhoto event,
     Emitter<PhotoState> emit,
