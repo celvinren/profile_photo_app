@@ -54,7 +54,7 @@ class _EditPhotoPageState extends State<EditPhotoPage> {
     );
     if (croppedFile != null) {
       imageFile = croppedFile;
-      context.read<PhotoBloc>().add(GetPhoto(File(imageFile!.path)));
+      context.read<PhotoBloc>().add(GetPhotoEvent(File(imageFile!.path)));
     }
     Navigator.pop(context);
   }

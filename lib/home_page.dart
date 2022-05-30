@@ -38,7 +38,7 @@ class _HomePageState extends State<HomePage> {
                           child: ClipOval(
                             child: state is PhotoInitial
                                 ? Image.asset('assets/images/user.png') // set a placeholder image when no photo is set
-                                : Image.file((state as PhotoSet).photo),
+                                : Image.file((state as GetPhotoState).photo),
                           ),
                         ));
                   },

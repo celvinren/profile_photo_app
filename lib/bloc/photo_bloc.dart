@@ -9,14 +9,14 @@ part 'photo_state.dart';
 
 class PhotoBloc extends Bloc<PhotoEvent, PhotoState> {
   PhotoBloc() : super(PhotoInitial()) {
-    on<GetPhoto>(_onGetPhoto);
+    on<GetPhotoEvent>(_onGetPhoto);
   }
 
   void _onGetPhoto(
-    GetPhoto event,
+    GetPhotoEvent event,
     Emitter<PhotoState> emit,
   ) {
     final photo = event.photo;
-    emit(PhotoSet(photo));
+    emit(GetPhotoState(photo));
   }
 }

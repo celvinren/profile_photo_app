@@ -10,10 +10,10 @@ class PhotoInitial extends PhotoState {
   List<Object> get props => this.props;
 }
 
-class PhotoSet extends PhotoState {
+class GetPhotoState extends PhotoState {
   final File photo;
 
-  PhotoSet(this.photo) : super([photo]);
+  GetPhotoState(this.photo) : super([photo]);
 
   @override
   List<Object> get props => [photo];
